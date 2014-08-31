@@ -49,14 +49,5 @@ public class Person1 {
 	public String toString(String input) {
 	  return name + calc(input);
 	}
-        
-        public void main(String[] args) {
-            Scanner scan = new Scanner(System.in);
-            Person1 p = new Person1("Jack Mueller");
-            System.out.println("Enter a variable string");
-            String vari = scan.next();
-            System.out.println(p);
-            System.out.println(p.toString(vari));
-        }
 
 }
