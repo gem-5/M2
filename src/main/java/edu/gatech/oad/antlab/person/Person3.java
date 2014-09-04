@@ -49,19 +49,4 @@ public class Person3 {
 
 		return result;
 	}
-
-	/**
-	 * Test main method (Can delete).
-	 * 
-	 * @param args
-	 *            unused
-	 */
-	public static void main(String[] args) {
-
-		Person3 p = new Person3("Hello ");
-		System.out.println(p.toString(""));
-		p = new Person3("Noob: ");
-		System.out.println(p.toString("James Jong Han Park"));
-
-	}
 }
