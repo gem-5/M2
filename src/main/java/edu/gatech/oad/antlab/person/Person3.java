@@ -3,8 +3,8 @@ package edu.gatech.oad.antlab.person;
 /**
  * A simple class for person 3 returns their name and a reversed string
  * 
- * @author Bob
- * @version 1.1
+ * @author Bob, James Jong Han Park
+ * @version 1.2
  */
 public class Person3 {
 	/** Holds the persons real name */
@@ -40,7 +40,28 @@ public class Person3 {
 	 * @return the reversed string
 	 */
 	private String calc(String input) {
-		// Person 3 put your implementation here
-		return null;
+
+		String result = "";
+
+		for (int x = 0; x < input.length(); x++) {
+			result = input.charAt(x) + result;
+		}
+
+		return result;
+	}
+
+	/**
+	 * Test main method (Can delete).
+	 * 
+	 * @param args
+	 *            unused
+	 */
+	public static void main(String[] args) {
+
+		Person3 p = new Person3("Hello ");
+		System.out.println(p.toString(""));
+		p = new Person3("Noob: ");
+		System.out.println(p.toString("James Jong Han Park"));
+
 	}
 }
