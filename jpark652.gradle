@@ -1,0 +1,23 @@
+defaultTasks  'jar'
+
+apply plugin: 'java'
+
+version = '1.0'
+
+dependencies {
+	compile files('lib/resources.jar')
+}
+
+//Define the contents of the jar file
+jar {
+	manifest {
+        attributes 	'Implementation-Title': 'M2', 
+        			'Implementation-Version': version , 
+        			'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain'
+    }
+    
+    from configurations.runtime.collect {
+        it.isDirectory() ? it : zipTree(it)
+    }
+}
+
